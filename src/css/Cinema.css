@@ -1,0 +1,63 @@
+.cinema-container {
+    background-color: #f0f2f5;
+    padding: 24px;
+  }
+  
+  .cinema-title {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .movie-info {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .movie-title {
+    font-size: 24px;
+  }
+  
+  .screen-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .screen {
+    width: 80%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  
+  .screen-text {
+    margin-top: 10px;
+  }
+  
+  .seat-map {
+    margin-bottom: 24px;
+  }
+  
+  .seat-checkbox {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+  }
+  
+  .seat-legend {
+    margin-bottom: 24px;
+  }
+  
+  .seat-legend-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .booking-info {
+    margin-bottom: 24px;
+  }
+  
+  .confirm-button {
+    width: 100%;
+  }
