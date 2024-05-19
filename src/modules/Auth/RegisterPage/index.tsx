@@ -1,4 +1,3 @@
-import React from "react";
 import { Row, Form, Col, Input, Button, Typography } from "antd";
 
 export default function RegisterPage() {
