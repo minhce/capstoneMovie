@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button, Checkbox, Row, Col, Typography, Space } from "antd";
 import { useSearchParams } from "react-router-dom";
 import '../../css/Cinema.css'; // Import CSS tùy chỉnh

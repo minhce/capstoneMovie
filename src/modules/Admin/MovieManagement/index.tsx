@@ -24,7 +24,7 @@ import {
   UploadOutlined,
   DeleteOutlined,
 } from "@ant-design/icons";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { addMovieApi, getListMovieApi } from "../../../apis/movie";
@@ -246,7 +246,7 @@ export default function MovieManagement() {
         />
         <div className="flex float-end mt-4 pb-4">
           <Pagination
-            defaultCurrent={currentPage} // khi user thao tác sẽ lấy đươch currentPage
+            defaultCurrent={currentPage} // khi user thao tác sẽ lấy được currentPage
             total={totalCount} // lấy từ api
             pageSize={PAGE_SIZE}
             onChange={(page: number) => {

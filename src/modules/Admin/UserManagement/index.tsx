@@ -7,7 +7,6 @@ import {
   Table,
   Tag,
 } from "antd";
-import React from "react";
 
 export default function UserManagement() {
   const columns = [
