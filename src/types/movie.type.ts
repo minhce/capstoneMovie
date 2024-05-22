@@ -31,18 +31,18 @@ export interface Movie {
 export type ListMovieState<T> = {
   loading: boolean;
   data: T[] | null;
-  error: any;
+  error: string | null;
 };
 
 export type Action = {
   type: string;
-  payload?: any;
+  payload?: unknown;
 };
 
 export type MovieDetailsState<K> = {
   loading: boolean;
   data: K | null;
-  error: any;
+  error: unknown;
 };
 
 export interface MovieDetails {

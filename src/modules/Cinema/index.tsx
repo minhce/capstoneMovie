@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button, Checkbox, Row, Col, Typography, Space } from "antd";
 import { useSearchParams } from "react-router-dom";
-import '../../css/Cinema.css'; // Import CSS tùy chỉnh
+import '../../styles/Cinema.css'; // Import CSS tùy chỉnh
 
 const { Title, Text } = Typography;
 
@@ -44,9 +44,9 @@ export default function Cinema() {
     <div className="cinema-container">
       <Title level={2} className="cinema-title">Đặt vé xem phim</Title>
       <div className="movie-info">
-        <Text strong className="movie-title">{tenPhim}</Text>
+        <Text strong className="movie-title">{tenPhim}<br/></Text>
         <Text className="showtime" style={{ fontSize: '18px', fontWeight: 'bold', color: 'blue' }}>
-          Suất chiếu: {ngay} - {gio} - {suatChieu}
+           Suất chiếu: {ngay} - {gio} - {suatChieu}
         </Text>
       </div>
       <div className="screen-container">
@@ -84,8 +84,8 @@ export default function Cinema() {
         </Space>
       </div>
       <div className="booking-info">
-        <Text strong>Tên người dùng: [Tên người dùng]</Text>
-        <Text>Số lượng ghế: {selectedSeats.length}</Text>
+        <Text strong>Tên người dùng: [Tên người dùng]<br/></Text>
+        <Text>Số lượng ghế: {selectedSeats.length}<br/></Text>
         <Text>Tổng tiền: [Tổng tiền]</Text>
       </div>
       <Button type="primary" onClick={handleConfirmBooking} className="confirm-button" size="small">

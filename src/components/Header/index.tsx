@@ -20,10 +20,11 @@ export default function Header() {
       <img src="/img/logo.png" alt="Logo" className="font-semibold" />
       <div className="flex items-center gap-4">
         <Link to="/" className="font-medium cursor-pointer">
-          Phim
+          Trang chủ
         </Link>
-        <span className="font-medium cursor-pointer">Rạp</span>
-        <span className="font-medium cursor-pointer">Thành viên</span>
+        <span className="font-medium cursor-pointer">Lịch chiếu</span>
+        <span className="font-medium cursor-pointer">Phim</span>
+        <span className="font-medium cursor-pointer">Quy định</span>
       </div>
       {currentUser ? (
         <>

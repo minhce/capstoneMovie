@@ -1,17 +1,18 @@
-import Banner from "./Banner";
-import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { actFetchListData } from "./duck/actions";
-import { RootState } from "../../../redux/store";
-import MovieComponent from "./Movie";
-
-
+// HomePage.tsx
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { actFetchListData } from './duck/actions';
+import { RootState, AppDispatch } from '../../../redux/store';
+import MovieComponent from './Movie';
+import { ListMovieState, Movie } from '../../../types/movie.type';
+import Banner from './Banner';
 
 export default function HomePage() {
-  const dispatch: any = useDispatch();
+  const dispatch: AppDispatch = useDispatch();
 
-  const { loading, data } = useSelector(
-    (state: RootState) => state.listMovieReducer
+  // Sử dụng useSelector với kiểu dữ liệu đã định nghĩa
+  const { loading, data }: ListMovieState<Movie> = useSelector(
+    (state: RootState) => state.listMovieReducer as ListMovieState<Movie>
   );
 
   useEffect(() => {
@@ -21,8 +22,13 @@ export default function HomePage() {
   const renderListMovie = () => {
     if (loading) return <div>Loading...</div>;
 
+    // Kiểm tra data có phải null không
     if (data && data.length > 0) {
-      return data.map((movie) => <MovieComponent movie={movie} />);
+      return data.map((movie) => (
+        <MovieComponent key={movie.maPhim} movie={movie} />
+      ));
+    } else {
+      return <div>Không có dữ liệu phim</div>; // Hiển thị thông báo nếu không có dữ liệu
     }
   };
 
@@ -35,6 +41,4 @@ export default function HomePage() {
       </div>
     </div>
   );
-
 }
-
